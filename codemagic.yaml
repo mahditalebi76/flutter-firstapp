@@ -19,7 +19,11 @@ workflows:
           include: true
           source: true
       cancel_previous_builds: false
-    scripts:
+    scripts: - xcodebuild build -workspace "MyXcodeWorkspace.xcworkspace" \
+    -scheme "MyScheme" \
+    CODE_SIGN_INDENTITY="" \
+    CODE_SIGNING_REQUIRED=NO \
+    CODE_SIGNING_ALLOWED=NO
     artifacts:
       - build/**/outputs/**/*.aab
     publishing:
