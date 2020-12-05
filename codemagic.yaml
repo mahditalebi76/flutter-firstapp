@@ -20,7 +20,6 @@ workflows:
           source: true
       cancel_previous_builds: false
     scripts:
-      - ...
     artifacts:
       - build/**/outputs/**/*.aab
     publishing:
